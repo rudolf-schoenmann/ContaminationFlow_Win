@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<UpdaterConfigFile>
+	<ServerConfig>
+		<RemoteFeed url="" />
+		<PublicWebsite url="" downloadsPage="" />
+		<GoogleAnalytics projectId="" />
+	</ServerConfig>
+	<LocalConfig>
+		<Permission allowUpdateCheck="false" appLaunchedBeforeAsking="-1" askAfterNbLaunches="0" />
+		<Branch name="" />
+		<GoogleAnalytics cookie="" />
+		<SkippedVersions />
+	</LocalConfig>
+</UpdaterConfigFile>
