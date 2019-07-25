@@ -1,5 +1,0 @@
-.git\
-Cimage\
-PugiXML\
-ZipUtils\
-Clipper\
