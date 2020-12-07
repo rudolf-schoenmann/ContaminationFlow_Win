@@ -99,9 +99,12 @@ void GLTextField::SetText(const int &val) {
 	SetText(tmp);
 }
 
-void GLTextField::SetText(const size_t &val) {
+void GLTextField::SetText(const size_t &val, bool returnLlong) {
 	char tmp[256];
-	sprintf(tmp, "%zd", val);
+	if(returnLlong)
+		sprintf(tmp, "%llu", static_cast<llong>(val));
+	else
+		sprintf(tmp, "%zd", val);
 	SetText(tmp);
 }
 
@@ -134,6 +137,14 @@ bool GLTextField::GetNumberSizeT(size_t *num) {
 	return (conv == 1);
 
 }
+
+bool GLTextField::GetNumberLlong(size_t *num) {
+
+	int conv = sscanf(m_Text, "%I64u", (llong)num);
+	return (conv == 1);
+
+}
+
 
 void GLTextField::UpdateXpos() {
 

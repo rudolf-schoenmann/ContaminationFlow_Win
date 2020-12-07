@@ -1,9 +1,9 @@
 /*
-Program:     MolFlow+ / Synrad+
-Description: Monte Carlo simulator for ultra-high vacuum and synchrotron radiation
-Authors:     Jean-Luc PONS / Roberto KERSEVAN / Marton ADY
-Copyright:   E.S.R.F / CERN
-Website:     https://cern.ch/molflow
+Program:     ContaminationFlow
+Description: Monte Carlo simulator for satellite contanimation studies
+Authors:     Rudolf Schönmann / Hoai My Van
+Copyright:   TU Munich
+Forked from: Molflow (CERN) (https://cern.ch/molflow)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -69,6 +69,9 @@ Full license text: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 #include "HistogramSettings.h"
 #include "HistogramPlotter.h"
 #include <iostream>
+
+double MAX_LLONG_IN_DOUBLE = static_cast<double>(18446744073709549568); //18446744073709549568: 2047 smaller than max value
+llong MAX_LLONG_IN_LLONG = static_cast<llong>(MAX_LLONG_IN_DOUBLE);
 
 //Hard-coded identifiers, update these on new release
 //---------------------------------------------------
@@ -781,11 +784,12 @@ void MolFlow::ApplyFacetParams() {
 	// covering will cout each contaminating parcticle
 
 	double coverage;
-	llong covering;
 	bool coverageNotNumber;
 	bool docoverage = false;
-	bool coveringNotNumber;
-	bool docovering = false;
+
+	//llong covering;
+	//bool coveringNotNumber;
+	//bool docovering = false;
 
 	if (facetcoverage->GetNumber(&coverage)) {
 		if (coverage<0.0) {
@@ -799,15 +803,15 @@ void MolFlow::ApplyFacetParams() {
 	else {
 		if (facetcoverage->GetText() == "...") docoverage = false;
 		else {/*
-			GLMessageBox::Display("Invalid sticking number","Error",GLDLG_OK,GLDLG_ICONERROR);
+			GLMessageBox::Display("Invalid coverage number","Error",GLDLG_OK,GLDLG_ICONERROR);
 			UpdateFacetParams();
 			return;*/
 			docoverage = true;
 			coverageNotNumber = true;
 		}
 	}
-
-	if (facetcovering->GetNumberSizeT(&covering)) {
+	/*
+	if (facetcovering->GetNumberLlong(&covering)) {
 		if (covering < 0) {
 			GLMessageBox::Display("Covering must be positive", "Error", GLDLG_OK, GLDLG_ICONERROR);
 			return;
@@ -818,14 +822,14 @@ void MolFlow::ApplyFacetParams() {
 	}
 	else {
 		if (facetcovering->GetText() == "...") docovering = false;
-		else {/*
-			GLMessageBox::Display("Invalid sticking number","Error",GLDLG_OK,GLDLG_ICONERROR);
+		else {
+			GLMessageBox::Display("Invalid covering number","Error",GLDLG_OK,GLDLG_ICONERROR);
 			UpdateFacetParams();
-			return;*/
+			return;
 			docovering = true;
 			coveringNotNumber = true;
 		}
-	}
+	}*/
 
 	// opacity
 	double opacity;
@@ -974,14 +978,21 @@ void MolFlow::ApplyFacetParams() {
 
 			if (docoverage) {
 				if (!coverageNotNumber) {
-					f->facetHitCache.hit.covering = covering;
+					double Nmono = (f->GetArea() * 1E-4 / (pow(carbondiameter, 2))); //GetArea() vs sh.area: 2sided facets treated differently
+					double coveringtmp = coverage*Nmono;
+					if (coveringtmp > MAX_LLONG_IN_DOUBLE)
+						f->facetHitCache.hit.covering = MAX_LLONG_IN_LLONG;
+					else
+						f->facetHitCache.hit.covering = llong(coveringtmp);
 					f->usercoverage = "";
+					f->usercovering = "";
 				}
 				else {
 					f->usercoverage = facetcoverage->GetText();
+					f->usercovering = facetcovering->GetText();
 				}
 			}
-
+			/*
 			if (docovering) {
 				if (!covering) {
 					f->facetHitCache.hit.covering = covering;
@@ -990,7 +1001,7 @@ void MolFlow::ApplyFacetParams() {
 				else {
 					f->usercovering = facetcovering->GetText();
 				}
-			}
+			}*/
 
 			if (doOpacity) {
 				if (!opacityNotNumber) {
@@ -1068,6 +1079,8 @@ void MolFlow::UpdateFacetParams(bool updateSelection) { //Calls facetAdvParams->
 
 		double f0Area = f0->GetArea();
 		double sumArea = f0Area; //sum facet area
+		double sumCov = (double)f0->facetHitCache.hit.covering;
+		double Nmono0 = (f0->GetArea() * 1E-4 / (pow(carbondiameter, 2))); //GetArea() vs sh.area: 2sided facets treated differently
 
 		bool stickingE = true;
 		bool opacityE = true;
@@ -1079,12 +1092,16 @@ void MolFlow::UpdateFacetParams(bool updateSelection) { //Calls facetAdvParams->
 		bool recordE = true;
 		bool is2sidedE = true;
 		bool coverageE = true;
-		bool coveringE = true;
+		//bool coveringE = true;
 		bool desrateE = true;
 
  		for (size_t sel = 1; sel < selectedFacets.size();sel++) {
 			f = geom->GetFacet(selectedFacets[sel]);
 			double fArea = f->GetArea();
+			double Nmono = (f->GetArea() * 1E-4 / (pow(carbondiameter, 2))); //GetArea() vs sh.area: 2sided facets treated differently
+			
+			sumCov+= (double)f->facetHitCache.hit.covering;
+
 			stickingE = stickingE && (f0->userSticking.compare(f->userSticking) == 0) && IsEqual(f0->sh.sticking, f->sh.sticking);
 			opacityE = opacityE && (f0->userOpacity.compare(f->userOpacity) == 0) && IsEqual(f0->sh.opacity, f->sh.opacity);
 			temperatureE = temperatureE && IsEqual(f0->sh.temperature, f->sh.temperature);
@@ -1095,8 +1112,8 @@ void MolFlow::UpdateFacetParams(bool updateSelection) { //Calls facetAdvParams->
 			desorbTypeNE = desorbTypeNE && IsEqual(f0->sh.desorbTypeN, f->sh.desorbTypeN);
 			recordE = recordE && (f0->sh.profileType == f->sh.profileType);  //profiles
 			sumArea += fArea;
-			coverageE= coverageE && (f0->usercoverage.compare(f->usercoverage) == 0) && IsEqual(f0->facetHitCache.hit.covering, f->facetHitCache.hit.covering);
-			coveringE = coveringE && (f0->usercovering.compare(f->usercovering) == 0) && IsEqual(f0->facetHitCache.hit.covering, f->facetHitCache.hit.covering);
+			coverageE= coverageE && (f0->usercoverage.compare(f->usercoverage) == 0) && IsEqual(double(f0->facetHitCache.hit.covering)/Nmono0, double(f->facetHitCache.hit.covering)/Nmono);
+			//coveringE = coveringE && (f0->usercovering.compare(f->usercovering) == 0) && IsEqual(f0->facetHitCache.hit.covering, f->facetHitCache.hit.covering);
 			desrateE= desrateE && (f0->userdesorption.compare(f->userdesorption) == 0) && IsEqual(f0->sh.desorption, f->sh.desorption);
 		}
 
@@ -1137,17 +1154,23 @@ void MolFlow::UpdateFacetParams(bool updateSelection) { //Calls facetAdvParams->
 
 		if (coverageE) {
 			if (f0->usercoverage.length() == 0)
-				facetcoverage->SetText(double((f0->facetHitCache.hit.covering)/(calcNmono()/calcdNsurf())));
+				facetcoverage->SetText(double(f0->facetHitCache.hit.covering) / Nmono0);
 			else facetcoverage->SetText(f0->usercoverage.c_str());
 		}
 		else facetcoverage->SetText("...");
 
+		/*
 		if (coveringE) {
 			if (f0->usercovering.length() == 0)
 				facetcovering->SetText(llong((f0->facetHitCache.hit.covering)));
 			else facetcovering->SetText(f0->usercovering.c_str());
 		}
 		else facetcovering->SetText("...");
+		*/
+		if (sumCov > MAX_LLONG_IN_DOUBLE)
+			facetcovering->SetText("...");
+		else
+			facetcovering->SetText((llong)sumCov, true);
 
 		if (temperatureE) facetTemperature->SetText(f0->sh.temperature); else facetTemperature->SetText("...");
 		if (is2sidedE) facetSideType->SetSelectedIndex(f0->sh.is2sided); else facetSideType->SetSelectedValue("...");
@@ -1159,12 +1182,12 @@ void MolFlow::UpdateFacetParams(bool updateSelection) { //Calls facetAdvParams->
 			facetPumping->SetFocusable(true);
 			//calcFlow();
 			facetPumping->SetText(0);
-
-
+			facetcovering->SetEditable(true);
 		}
 		else {
 			facetPumping->SetFocusable(false);
 			facetPumping->SetText("...");
+			facetcovering->SetEditable(false);
 		}
 
 		if (desorbTypeE) {
@@ -1232,7 +1255,6 @@ void MolFlow::UpdateFacetParams(bool updateSelection) { //Calls facetAdvParams->
 		//Enabled->Editable
 		facetDesRate->SetFocusable(true);
 		facetcoverage->SetEditable(true);
-		facetcovering->SetEditable(true);
 		facetSticking->SetFocusable(true);
 		facetOpacity->SetEditable(true);
 		facetTemperature->SetEditable(true);
@@ -2115,6 +2137,7 @@ void MolFlow::ProcessMessage(GLComponent *src, int message)
 		return;
 	} //Already processed by common interface
 	Geometry *geom = worker.GetGeometry();
+	std::vector<size_t> selectedFacets = geom->GetSelectedFacets();
 	switch (message) {
 
 		//MENU --------------------------------------------------------------------
@@ -2401,7 +2424,8 @@ void MolFlow::ProcessMessage(GLComponent *src, int message)
 			calcDesorptionRate();
 			facetApplyBtn->SetEnabled(true);
 		}
-		else if (src == facetcovering) {
+		
+		else if (src == facetcovering && selectedFacets.size() == 1) {
 			calcCoverage();
 			calcStickingnew();
 			calcDesorptionRate();
@@ -3133,19 +3157,24 @@ void MolFlow::calcStickingnew() {
 
 void MolFlow::calcCoverage() {
 	llong covering;
-	facetcovering->GetNumberSizeT(&covering);
-	facetcoverage->SetText(double((covering) / (calcNmono() / calcdNsurf())));
+	facetcovering->GetNumberLlong(&covering);
+	facetcoverage->SetText(double((covering) / calcNmono()));
 
 }
 
 void MolFlow::calcCovering() {
 	double coverage;
 	facetcoverage->GetNumber(&coverage);
-	facetcovering->SetText(llong(abs(coverage * calcNmono() / calcdNsurf())));
+	double coveringtmp = abs(coverage * calcNmono());
+	if (coveringtmp > MAX_LLONG_IN_DOUBLE)
+		facetcovering->SetText("...");
+	else
+		facetcovering->SetText(size_t(coveringtmp), true);
 
 }
 
 double MolFlow::calcNmono() {//Calculates the Number of (carbon equivalent) particles of one monolayer.
+	//GetArea() vs sh.area: 2sided facets treated differently -> here sum over GetArea() saved in facetArea
 	double area;
 	facetArea->GetNumber(&area); //area is in units of [cm^2] => has to be converted to [m^2]
 	double Nmono = (area * 1E-4 /(pow(carbondiameter, 2)));
@@ -3160,7 +3189,7 @@ double MolFlow::calcdNsurf() {// Calculates the (carbon equivalent realtive) mas
 //double calcDesorption("Facet"){}
 //double calcDesorptionRate("Facet"){}
 
-double MolFlow::calcDesorption() {
+double MolFlow::calcDesorption() {// deprecated function body
 	double d = 1;
 	double E_de = 1.5E-21;
 	double coverage;
@@ -3173,7 +3202,7 @@ double MolFlow::calcDesorption() {
 	return desorption;
 }
 
-void MolFlow::calcDesorptionRate() {
+void MolFlow::calcDesorptionRate() {// deprecated function body
 	double temperature;
 	facetTemperature->GetNumber(&temperature);
 

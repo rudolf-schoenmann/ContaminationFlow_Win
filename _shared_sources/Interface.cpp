@@ -1,9 +1,9 @@
 /*
-Program:     MolFlow+ / Synrad+
-Description: Monte Carlo simulator for ultra-high vacuum and synchrotron radiation
-Authors:     Jean-Luc PONS / Roberto KERSEVAN / Marton ADY
-Copyright:   E.S.R.F / CERN
-Website:     https://cern.ch/molflow
+Program:     ContaminationFlow
+Description: Monte Carlo simulator for satellite contanimation studies
+Authors:     Rudolf Schönmann / Hoai My Van
+Copyright:   TU Munich
+Forked from: Molflow (CERN) (https://cern.ch/molflow)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@ Full license text: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 #include <direct.h> //_getcwd()
 #include <io.h> // Check for recovery
 #include <filesystem>
+# include <fstream>
 //#include "AppUpdater.h"
 
 #include "GLApp/GLFileBox.h"
@@ -797,6 +798,8 @@ void Interface::OneTimeSceneInit_shared_pre() {
 	menu->GetSubMenu("Selection")->Add("Select memorized");
 	selectionsMenu = menu->GetSubMenu("Selection")->GetSubMenu("Select memorized");
 
+	menu->GetSubMenu("Selection")->Add("Export Selections", MENU_SELECTION_EXPORT);
+
 	menu->GetSubMenu("Selection")->Add("Clear memorized", MENU_SELECTION_CLEARSELECTIONS);
 	clearSelectionsMenu = menu->GetSubMenu("Selection")->GetSubMenu("Clear memorized");
 	clearSelectionsMenu->Add("Clear All", MENU_SELECTION_CLEARALL);
@@ -1183,7 +1186,6 @@ bool Interface::ProcessMessage_shared(GLComponent *src, int message) {
 			if (AskToSave()) {
 				if (worker.isRunning) worker.Stop_Public();
 				ImportLoadBuffer();
-				int test = 0;
 			}
 			return true;
 		case MENU_FILE_INSERTGEO:
@@ -1576,6 +1578,8 @@ bool Interface::ProcessMessage_shared(GLComponent *src, int message) {
 				ClearAllSelections();
 			}
 			return true;
+		case MENU_SELECTION_EXPORT:
+			ExportSelectionToTxt();
 		case MENU_VERTEX_UNSELECTALL:
 			geom->UnselectAllVertex();
 			return true;
@@ -1772,9 +1776,9 @@ bool Interface::ProcessMessage_shared(GLComponent *src, int message) {
 			std::ostringstream aboutText;
 			aboutText << "Program:    " << appName << " " << appVersionName;
 			aboutText << R"(
-Authors:     Jean-Luc PONS / Roberto KERSEVAN / Marton ADY
-Copyright:   E.S.R.F / CERN   (2018)
-Website:    https://cern.ch/molflow
+Authors:     Jean-Luc PONS / Roberto KERSEVAN / Marton ADY / Rudolf Schönmann / Hoai My VAN
+Copyright:   TU Munich
+Forked from: Molflow (CERN) (https://cern.ch/molflow).
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -2057,6 +2061,62 @@ void Interface::AddSelection() {
 	newSelection.name = selectionName;
 	selections.push_back(newSelection);
 	RebuildSelectionMenus();
+}
+
+void Interface::ExportSelectionToTxt() {
+
+	if (selections.size() == 0) {
+		GLMessageBox::Display("No selections saved", "Error", GLDLG_OK, GLDLG_ICONERROR);
+		return;
+	}
+
+	std::stringstream tmp;
+	std::string tmpGL;
+	tmp << "facetGroups";
+	for (unsigned int i = 0; i < selections.size(); i++) {
+		for (unsigned int j = 0; j < selections[i].selection.size(); j++) {
+			tmp << "  " << selections[i].selection[j];
+		}
+		if (i < selections.size() - 1) tmp << "  -";
+	}
+	tmpGL = "Save the following?";
+
+	bool ok = true;
+	ok = (GLMessageBox::Display(tmpGL.c_str(), "Question", GLDLG_OK | GLDLG_CANCEL, GLDLG_ICONINFO, tmp.str()) == GLDLG_OK);
+	if (ok) {
+		FILENAME *fn = GLFileBox::SaveFile(currentDir, NULL, "Save File", fileTexFilters, 0);
+		if (fn) {
+			try {
+				char tmpQ[512];
+				std::ofstream f;
+
+				char * fileName = fn->fullName;
+				if (FileUtils::Exist(fileName)) {
+					sprintf(tmpQ, "Overwrite existing file ?\n%s", fileName);
+					ok = (GLMessageBox::Display(tmpQ, "Question", GLDLG_OK | GLDLG_CANCEL, GLDLG_ICONWARNING) == GLDLG_OK);
+				}
+
+				if (ok) {
+					f.open(fileName, ios::binary);
+					if (!f) {
+						char tmpW[256];
+						sprintf(tmpW, "Cannot open file for writing %s", fileName);
+						throw Error(tmpW);
+					}
+					// Block dpHit during the whole disc writing
+					f<<tmp.str()<<std::endl;
+					f.close();
+				}
+			}
+			catch (Error &e) {
+				char errMsg[512];
+				sprintf(errMsg, "%s\nFile:%s", e.GetMsg(), fn->fullName);
+				GLMessageBox::Display(errMsg, "Error", GLDLG_OK, GLDLG_ICONERROR);
+			}
+		}
+	}
+
+
 }
 
 //VIEWS

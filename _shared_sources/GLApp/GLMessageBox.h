@@ -6,6 +6,8 @@
 #include "GLWindow.h"
 #include <vector>
 
+class GLTextField;
+
 // Buttons
 #define GLDLG_OK          0x0001
 #define GLDLG_CANCEL      0x0002
@@ -21,13 +23,15 @@ class GLMessageBox : private GLWindow {
 
 public:
   // Display a modal dialog and return the code of the pressed button
-  static int Display(const char *message, const char *title=NULL,int mode=GLDLG_OK,int icon=GLDLG_ICONNONE);
-  static int Display(const std::string & message, const std::string & title, const std::vector<std::string>& buttonList, int icon);
+  static int Display(const char *message, const char *title=NULL,int mode=GLDLG_OK,int icon=GLDLG_ICONNONE, const std::string text = "");
+  static int Display(const std::string & message, const std::string & title, const std::vector<std::string>& buttonList, int icon, const std::string text = "");
 
   int  rCode;
 
 private:
-	GLMessageBox(const std::string & message, const std::string & title, const std::vector<std::string>& buttonList, int icon);
+
+  GLTextField *textField;
+	GLMessageBox(const std::string & message, const std::string & title, const std::vector<std::string>& buttonList, int icon, const std::string text = "");
 	//GLMessageBox(const char *message,char *title,int mode,int icon);
   void ProcessMessage(GLComponent *src,int message);
 

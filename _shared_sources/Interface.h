@@ -1,9 +1,9 @@
 /*
-Program:     MolFlow+ / Synrad+
-Description: Monte Carlo simulator for ultra-high vacuum and synchrotron radiation
-Authors:     Jean-Luc PONS / Roberto KERSEVAN / Marton ADY
-Copyright:   E.S.R.F / CERN
-Website:     https://cern.ch/molflow
+Program:     ContaminationFlow
+Description: Monte Carlo simulator for satellite contanimation studies
+Authors:     Rudolf Schönmann / Hoai My Van
+Copyright:   TU Munich
+Forked from: Molflow (CERN) (https://cern.ch/molflow)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -163,6 +163,7 @@ typedef struct {
 
 #define MENU_SELECTION_ADDNEW             501
 #define MENU_SELECTION_CLEARALL           502
+#define MENU_SELECTION_EXPORT           503
 
 #define MENU_SELECTION_MEMORIZESELECTIONS   5100
 #define MENU_SELECTION_SELECTIONS           5200
@@ -367,6 +368,7 @@ public:
 	void ClearAllSelections();
 	void OverWriteSelection(size_t idOvr);
 	void ClearSelection(size_t idClr);
+	void ExportSelectionToTxt();
 	void RebuildSelectionMenus();
 	
 	void UpdateFacetlistSelected();

@@ -4,10 +4,11 @@
 #include "GLLabel.h"
 #include "GLIcon.h"
 #include "GLToolkit.h"
+#include "GLTextField.h"
 #include "MathTools.h" //Min max
 
 // Construct a message dialog box
-GLMessageBox::GLMessageBox(const std::string & message, const std::string & title, const std::vector<std::string> & buttonList, int icon) :GLWindow() {
+GLMessageBox::GLMessageBox(const std::string & message, const std::string & title, const std::vector<std::string> & buttonList, int icon, const std::string text) :GLWindow() {
 
 	int xD, yD, wD, hD, iconWidth, txtWidth, txtHeight;
 	int nbButton = 0;
@@ -21,6 +22,14 @@ GLMessageBox::GLMessageBox(const std::string & message, const std::string & titl
 	iconWidth = (icon == GLDLG_ICONNONE) ? 0 : 64;
 	label->SetBounds(iconWidth + 3, 3, txtWidth, txtHeight);
 	Add(label);
+
+	if(text != "") {
+		//Text Field
+		textField = new GLTextField(0, text.c_str());
+		textField->SetEditable(true);
+		textField->SetBounds(iconWidth+ 3, 3 + txtHeight+10, txtWidth, 18);
+		Add(textField);
+	}
 
 	// Icon
 	GLIcon   *gIcon = NULL;
@@ -46,7 +55,7 @@ GLMessageBox::GLMessageBox(const std::string & message, const std::string & titl
 	// Buttons
 	int totalBW = (int)buttonList.size() * 80;
 	wD = Max(txtWidth + iconWidth + 30, totalBW);
-	hD = 50 + Max(txtHeight, iconWidth);
+	hD = 50 + Max(txtHeight+30, iconWidth);
 	int startX = (wD - totalBW) / 2;
 	int startY = hD - 45;
 
@@ -160,7 +169,7 @@ void GLMessageBox::ProcessMessage(GLComponent *src,int message) {
   GLWindow::ProcessMessage(src,message);
 }
 
-int GLMessageBox::Display(const char *message, const char *title,int mode,int icon) {
+int GLMessageBox::Display(const char *message, const char *title,int mode,int icon, const std::string text) {
 	std::vector<std::string> list;
 	if (mode & GLDLG_OK) {
 		list.push_back("OK");
@@ -171,12 +180,12 @@ int GLMessageBox::Display(const char *message, const char *title,int mode,int ic
 	std::string titleStr;
 	if (title == NULL) titleStr = "";
 	else titleStr = title;
-	int retCode = Display(message, titleStr, list, icon);
+	int retCode = Display(message, titleStr, list, icon,text);
 	if (retCode == 0) return GLDLG_OK;
 	else return GLDLG_CANCEL;
 }
 
-int GLMessageBox::Display(const std::string & message, const std::string & title, const std::vector<std::string>& buttonList, int icon) {
+int GLMessageBox::Display(const std::string & message, const std::string & title, const std::vector<std::string>& buttonList, int icon, const std::string text) {
 	GLfloat old_mView[16];
 	GLfloat old_mProj[16];
 	GLint   old_viewport[4];
@@ -187,7 +196,7 @@ int GLMessageBox::Display(const std::string & message, const std::string & title
 	glGetIntegerv(GL_VIEWPORT, old_viewport);
 
 	// Initialise
-	GLMessageBox *dlg = new GLMessageBox(message, title, buttonList, icon);
+	GLMessageBox *dlg = new GLMessageBox(message, title, buttonList, icon,text);
 	dlg->DoModal();
 	int ret = dlg->rCode;
 	delete dlg;
