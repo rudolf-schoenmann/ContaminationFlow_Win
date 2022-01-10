@@ -326,6 +326,7 @@ public:
 	double finalOutgassingRate; //Number of outgassing molecules / second at latest_moment (constant flow)
 	double finalOutgassingRate_Pa_m3_sec;
 	double gasMass;
+	double gasDiameter; //New quantity to edit the particle diameter in the GUI. => This will effect covering.
 	bool enableDecay;
 	double halfLife;
 	double timeWindowSize;
@@ -352,6 +353,7 @@ public:
 			, CEREAL_NVP(totalDesorbedMolecules)
 			, CEREAL_NVP(finalOutgassingRate)
 			, CEREAL_NVP(gasMass)
+			, CEREAL_NVP(gasDiameter)
 			, CEREAL_NVP(enableDecay)
 			, CEREAL_NVP(halfLife)
 			, CEREAL_NVP(timeWindowSize)

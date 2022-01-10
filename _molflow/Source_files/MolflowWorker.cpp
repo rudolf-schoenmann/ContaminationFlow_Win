@@ -90,7 +90,8 @@ Worker::Worker() {
 	wp.timeWindowSize = 1E-10; //Dirac-delta desorption pulse at t=0
 	wp.useMaxwellDistribution = true;
 	wp.calcConstantFlow = true;
-	wp.gasMass = 28.0;
+	wp.gasMass = 18.02; //mass of water
+	wp.gasDiameter = 276E-12; // 96 pm O-H bond length + 180 pm hydrogen brigde bond between H and next O
 	wp.enableDecay = false;
 	wp.halfLife = 1;
 	wp.finalOutgassingRate = wp.finalOutgassingRate_Pa_m3_sec = wp.totalDesorbedMolecules = 0.0;
@@ -458,7 +459,7 @@ void Worker::LoadGeometry(char *fileName,bool insert,bool newStr) {
 		
 		//default values
 		wp.enableDecay = false;
-		wp.gasMass = 28;
+		wp.gasMass = 18.02;
 	}
 
 	/*
@@ -723,9 +724,10 @@ void Worker::LoadGeometry(char *fileName,bool insert,bool newStr) {
 
 			progressDlg->SetMessage("Building geometry...");
 			if (!insert) {
+				
 				geom->LoadXML_geom(loadXML, this, progressDlg);
 				geom->UpdateName(fileName);
-
+				
 				progressDlg->SetMessage("Reloading worker with new geometry...");
 				try {
 					RealReload(); //To create the dpHit dataport for the loading of textures, profiles, etc...
@@ -1656,23 +1658,35 @@ std::vector<std::pair<double, double>> Worker::Generate_CDF(double gasTempKelvin
 }
 
 std::vector<std::pair<double, double>> Worker::Generate_ID(int paramId){
+	//code of this function is changed significally with respect to Molflow+ code,
+	//since in ContaminationFlow we do not work with moments.
+
 	std::vector<std::pair<double, double>> ID;
+	/* => old Molflow+ code with moments
 	//First, let's check at which index is the latest moment
 	size_t indexBeforeLastMoment;
 	for (indexBeforeLastMoment = 0; indexBeforeLastMoment < parameters[paramId].GetSize() &&
 		(parameters[paramId].GetX(indexBeforeLastMoment) < wp.latestMoment); indexBeforeLastMoment++);
 		if (indexBeforeLastMoment >= parameters[paramId].GetSize()) indexBeforeLastMoment = parameters[paramId].GetSize() - 1; //not found, set as last moment
+    */
 
 	//Construct integral from 0 to latest moment
+	size_t last_index = parameters[paramId].GetSize() - 1;		 
+	double last_moment = parameters[paramId].GetX(last_index);
 	//Zero
 	ID.push_back(std::make_pair(0.0, 0.0));
 
 	//First moment
-	ID.push_back(std::make_pair(parameters[paramId].GetX(0),
-		parameters[paramId].GetX(0)*parameters[paramId].GetY(0)*0.100)); //for the first moment (0.1: mbar*l/s -> Pa*m3/s)
-
+	if (parameters[paramId].GetX(0) == 0) {//if first moment == 0
+		//=> we skip that (and do nothing here).
+		//otherwise we would have created one additional pair of (0 0).
+	}
+	else {
+		ID.push_back(std::make_pair(parameters[paramId].GetX(0),
+		parameters[paramId].GetX(0) * parameters[paramId].GetY(0) * 0.100)); //for the first moment (0.1: mbar*l/s -> Pa*m3/s)
+	}
 	//Intermediate moments
-	for (size_t pos = 1; pos <= indexBeforeLastMoment; pos++) {
+	for (size_t pos = 1; pos <= last_index; pos++) {
 		if (IsEqual(parameters[paramId].GetY(pos) , parameters[paramId].GetY(pos-1))) //two equal values follow, simple integration by multiplying
 			ID.push_back(std::make_pair(parameters[paramId].GetX(pos),
 			ID.back().second +
@@ -1688,7 +1702,7 @@ std::vector<std::pair<double, double>> Worker::Generate_ID(int paramId){
 			}
 		}
 	}
-
+	/* => old Molflow+ code with moments
 	//wp.latestMoment
 	double valueAtlatestMoment = parameters[paramId].InterpolateY(wp.latestMoment,false);
 	if (IsEqual(valueAtlatestMoment , parameters[paramId].GetY(indexBeforeLastMoment))) //two equal values follow, simple integration by multiplying
@@ -1705,7 +1719,7 @@ std::vector<std::pair<double, double>> Worker::Generate_ID(int paramId){
 				0.05*delta_t*avg_value));
 		}
 	}
-
+	*/
 	return ID;
 
 }
@@ -1743,6 +1757,7 @@ void Worker::SendFacetHitCounts(Dataport* dpHit) {
 
 void Worker::ExportHitBuffer(char *fileName)
 {
+	RealReload();
 	char tmp[512];
 
 	std::ofstream f;
@@ -1783,6 +1798,7 @@ void Worker::ExportHitBuffer(char *fileName)
 
 void Worker::ExportLoadBuffer(char *fileName)
 {
+	RealReload();
 	char tmp[512];
 
 	std::ofstream f;
