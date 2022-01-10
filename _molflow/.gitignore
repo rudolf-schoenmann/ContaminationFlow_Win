@@ -1,6 +1,4 @@
 #Ignore files build by Visual Studio
-Debug*/
-Release*/
 *_project/
 *.sdf
 ipch/
