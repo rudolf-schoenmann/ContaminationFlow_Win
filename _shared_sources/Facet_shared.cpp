@@ -49,7 +49,8 @@ Facet::Facet(size_t nbIndex) {
 	vertices2.resize(nbIndex);
 	visible.resize(nbIndex);
 
-	memset(&facetHitCache, 0, sizeof(FacetHitBuffer));
+	//memset(&facetHitCache, 0, sizeof(FacetHitBuffer));
+	facetHitCache = FacetHitBuffer();
 
 	sh.nbIndex = nbIndex;
 
@@ -164,8 +165,8 @@ Facet::Facet(size_t nbIndex) {
 
 Facet::Facet() {
 
-	memset(&facetHitCache, 0, sizeof(FacetHitBuffer));
-
+	//memset(&facetHitCache, 0, sizeof(FacetHitBuffer));
+	facetHitCache = FacetHitBuffer();
 
 	sh.sticking = 0.0;
 	sh.opacity = 1.0;

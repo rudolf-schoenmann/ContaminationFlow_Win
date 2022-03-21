@@ -579,7 +579,7 @@ void Worker::Update(float appTime) {
 #endif
 #ifdef MOLFLOW
 				memcpy(&(f->facetHitCache), buffer + f->sh.hitOffset + displayedMoment * sizeof(FacetHitBuffer), sizeof(FacetHitBuffer));
-				
+		
 				if (f->sh.anglemapParams.record) {
 					if (!f->sh.anglemapParams.hasRecorded) { //It was released by the user maybe
 						//Initialize angle map

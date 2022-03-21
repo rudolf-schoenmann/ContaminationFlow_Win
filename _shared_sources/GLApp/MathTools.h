@@ -19,6 +19,7 @@ Full license text: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 */
 #pragma once
 #include <vector>
+#include <string>
 
 bool    IsEqual(const double &a, const double &b, double toleranceRatio=1E-6);
 double RoundAngle(double a);

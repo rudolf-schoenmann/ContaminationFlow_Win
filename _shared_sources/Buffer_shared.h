@@ -22,6 +22,7 @@ Full license text: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 #include "Vector.h"
 #include "GLApp/GLTypes.h"
 #include <cereal/cereal.hpp>
+#include <boost/multiprecision/cpp_int.hpp>
 #include <array>
 
 #ifdef MOLFLOW
@@ -492,42 +493,33 @@ public:
 };
 
 #ifdef MOLFLOW
-typedef union {
+struct alignas(16) FacetHitBuffer {
 
-	struct {
-		// Counts
-		llong nbDesorbed;          // Number of desorbed molec
-		llong nbMCHit;               // Number of hits
-		double nbHitEquiv;			//Equivalent number of hits, used for low-flux impingement rate and density calculation
-		double nbAbsEquiv;          // Equivalent number of absorbed molecules
-		double sum_1_per_ort_velocity;    // sum of reciprocials of orthogonal velocity components, used to determine the density, regardless of facet orientation
-		double sum_1_per_velocity;          //For average molecule speed calculation
-		double sum_v_ort;          // sum of orthogonal speeds of incident velocities, used to determine the pressure
-		llong covering; //new counter for covering
-	} hit;
-
-	struct {
-		// density
-		double desorbed;
-		double value;
-		double absorbed;
-	} density;
+	// Counts
+	boost::multiprecision::uint128_t covering; //new counter for covering
+	llong nbDesorbed;          // Number of desorbed molec
+	llong nbMCHit;               // Number of hits
+	double nbHitEquiv;			//Equivalent number of hits, used for low-flux impingement rate and density calculation
+	double nbAbsEquiv;          // Equivalent number of absorbed molecules
+	double sum_1_per_ort_velocity;    // sum of reciprocials of orthogonal velocity components, used to determine the density, regardless of facet orientation
+	double sum_1_per_velocity;          //For average molecule speed calculation
+	double sum_v_ort;          // sum of orthogonal speeds of incident velocities, used to determine the pressure
 
 	template<class Archive>
 	void serialize(Archive & archive)
 	{
 		archive(
-			CEREAL_NVP(hit.nbDesorbed),
-			CEREAL_NVP(hit.nbMCHit),
-			CEREAL_NVP(hit.nbHitEquiv),
-			CEREAL_NVP(hit.nbAbsEquiv),
-			CEREAL_NVP(hit.sum_1_per_ort_velocity),
-			CEREAL_NVP(hit.sum_1_per_velocity),
-			CEREAL_NVP(hit.sum_v_ort),
-			CEREAL_NVP(hit.covering)
-			);
+			CEREAL_NVP(covering),
+			CEREAL_NVP(nbDesorbed),
+			CEREAL_NVP(nbMCHit),
+			CEREAL_NVP(nbHitEquiv),
+			CEREAL_NVP(nbAbsEquiv),
+			CEREAL_NVP(sum_1_per_ort_velocity),
+			CEREAL_NVP(sum_1_per_velocity),
+			CEREAL_NVP(sum_v_ort)
+		);
 	}
-} FacetHitBuffer;
+};
 #endif
 
 #ifdef SYNRAD
@@ -567,7 +559,6 @@ public:
 	size_t  lastLeakIndex;		  //Index of last recorded leak in gHits (turns over when reaches LEAKCACHESIZE)
 	size_t  leakCacheSize;        //Number of valid leaks in the cache
 	size_t  nbLeakTotal;         // Total leaks
-	
 
 #ifdef MOLFLOW
 	TEXTURE_MIN_MAX texture_limits[3]; //Min-max on texture

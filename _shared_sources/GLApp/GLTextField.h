@@ -3,6 +3,7 @@
 #define _GLTEXTFIELDH_
 
 #include "GLComponent.h"
+#include <boost/multiprecision/cpp_int.hpp>
 #include <string>
 
 #define MAX_TEXT_SIZE 1024
@@ -37,6 +38,7 @@ public:
   bool GetNumberInt(int *num);
   bool GetNumberSizeT(size_t *num);
   bool GetNumberLlong(size_t *num);
+  bool GetNumberUint128_t(boost::multiprecision::uint128_t* num);
 
   void SelectAll();
   bool IsCaptured();

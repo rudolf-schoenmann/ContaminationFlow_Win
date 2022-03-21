@@ -145,6 +145,15 @@ bool GLTextField::GetNumberLlong(size_t *num) {
 
 }
 
+bool GLTextField::GetNumberUint128_t(boost::multiprecision::uint128_t *num) {
+    char tmp[256];
+    int conv = sscanf(m_Text, "%s", tmp);
+    std::string s(tmp);
+    *num = boost::multiprecision::uint128_t(s);
+    return (conv == 1);
+ }
+
+
 
 void GLTextField::UpdateXpos() {
 
