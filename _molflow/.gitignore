@@ -1,5 +1,4 @@
 #Ignore files build by Visual Studio
-*_project/
 *.sdf
 ipch/
 source_snapshots/
