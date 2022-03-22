@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profiling|Win32">
+      <Configuration>Profiling</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profiling|x64">
+      <Configuration>Profiling</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{437BB2C7-79B5-4C67-9BA4-4BCE2E2C2E8E}</ProjectGuid>
+    <RootNamespace>molflow_project</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Release\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|Win32'">
+    <OutDir>..\Release\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\Debug\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Release\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">
+    <OutDir>$(SolutionDir)Release\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Debug\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>molflow</TargetName>
+    <IncludePath>..\Source_files\GLApp\GLChart;..\Source_files\GLApp;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(WindowsSDK_IncludePath)</IncludePath>
+    <SourcePath>..\GLApp\GLChart;..\Source_files\GLApp;$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;</SourcePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir_71A)lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|Win32'">
+    <TargetName>molflow</TargetName>
+    <IncludePath>..\Source_files\GLApp\GLChart;..\Source_files\GLApp;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(WindowsSDK_IncludePath)</IncludePath>
+    <SourcePath>..\GLApp\GLChart;..\Source_files\GLApp;$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;</SourcePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir_71A)lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>molflow</TargetName>
+    <IncludePath>..\Source_files\GLApp\GLChart;..\Source_files\GLApp;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(WindowsSDK_IncludePath)</IncludePath>
+    <SourcePath>..\GLApp\GLChart;..\Source_files\GLApp;$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;</SourcePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir_71A)lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>molflow</TargetName>
+    <IncludePath>..\..\_shared_sources;..\Source_files;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;lib/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;</SourcePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);</LibraryPath>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">
+    <TargetName>molflow</TargetName>
+    <IncludePath>..\..\_shared_sources;..\Source_files;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;lib/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;</SourcePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);</LibraryPath>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>molflow</TargetName>
+    <IncludePath>..\..\_shared_sources;..\Source_files;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;lib/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;..\..\_shared_sources;..\Source_files</SourcePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>lib/include;lib/include/SDL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN;NDEBUG;_WINDOWS;_WITHGL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>..\Release\molflow.exe</OutputFile>
+      <AdditionalLibraryDirectories>lib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl32.lib;glu32.lib;opengl32.lib;Advapi32.lib;user32.lib;shell32.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+      <Profile>false</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>lib/include;lib/include/SDL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN;NDEBUG;_WINDOWS;_WITHGL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>..\Release\molflow.exe</OutputFile>
+      <AdditionalLibraryDirectories>lib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl32.lib;glu32.lib;opengl32.lib;Advapi32.lib;user32.lib;shell32.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+      <Profile>false</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>lib/include;lib/include/SDL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN;NDEBUG;_WINDOWS;_WITHGL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>..\Debug\molflow.exe</OutputFile>
+      <AdditionalLibraryDirectories>lib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl32.lib;glu32.lib;opengl32.lib;Advapi32.lib;user32.lib;shell32.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <Profile>false</Profile>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>lib/include;lib/include/SDL;C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MOLFLOW;WIN;CURL_STATICLIB;NDEBUG;_WINDOWS;_WITHGL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>..\Release\molflow.exe</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);lib/lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.16299.0\um\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libgsl_dll.lib;libgslcblas_dll.lib;sdlx64.lib;libcurl_a_x64.lib;CImagelibx64.lib;opengl32.lib;Advapi32.lib;user32.lib;shell32.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>false</Profile>
+      <SubSystem>Windows</SubSystem>
+      <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>lib/include;lib/include/SDL;C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MOLFLOW;WIN;CURL_STATICLIB;NDEBUG;_WINDOWS;_WITHGL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>..\Release\molflow.exe</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);lib/lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.16299.0\um\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libgsl_dll.lib;libgslcblas_dll.lib;sdlx64.lib;libcurl_a_x64.lib;CImagelibx64.lib;opengl32.lib;Advapi32.lib;user32.lib;shell32.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>false</Profile>
+      <SubSystem>Windows</SubSystem>
+      <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>lib/include;lib/include/SDL;C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MOLFLOW;WIN;CURL_STATICLIB;NDEBUG;_WINDOWS;_WITHGL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CompileAs>Default</CompileAs>
+      <CompileAsManaged>false</CompileAsManaged>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(SolutionDir)Debug\molflow.exe</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);lib/lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.16299.0\um\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libgsl_dll.lib;libgslcblas_dll.lib;sdlx64.lib;libcurl_a_x64.lib;CImagelibx64_dbg.lib;opengl32.lib;Advapi32.lib;user32.lib;shell32.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>false</Profile>
+      <SubSystem>Windows</SubSystem>
+      <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalOptions> /NODEFAULTLIB:msvcrt.lib	
+ %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\_shared_sources\AddVertex.cpp" />
+    <ClCompile Include="..\..\_shared_sources\AlignFacet.cpp" />
+    <ClCompile Include="..\..\_shared_sources\AppUpdater.cpp" />
+    <ClCompile Include="..\..\_shared_sources\ASELoader.cpp" />
+    <ClCompile Include="..\..\_shared_sources\BuildIntersection.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Clipper\clipper.cpp" />
+    <ClCompile Include="..\..\_shared_sources\CollapseSettings.cpp" />
+    <ClCompile Include="..\..\_shared_sources\CreateShape.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Distributions.cpp" />
+    <ClCompile Include="..\..\_shared_sources\ExtrudeFacet.cpp" />
+    <ClCompile Include="..\..\_shared_sources\FacetCoordinates.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Facet_shared.cpp" />
+    <ClCompile Include="..\..\_shared_sources\File.cpp" />
+    <ClCompile Include="..\..\_shared_sources\FormulaEditor.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Geometry_shared.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GeometryRender_shared.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GeometryViewer_shared.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLApp.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLButton.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\AxisPanel.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLAxis.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLChart.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLChartOptions.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLDataView.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLDataViewOptions.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLColorBox.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLCombo.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLComponent.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLContainer.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLFileBox.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLFont.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLGradient.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLIcon.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLInputBox.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLLabel.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLList.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLMatrix.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLMenu.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLMenuBar.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLMessageBox.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLParser.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLProgress.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLSaveDialog.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLScrollBar.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLSpinner.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLSprite.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLTabWindow.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLTextField.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLTitledPanel.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLToggle.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLToolkit.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLUnitDialog.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLWindow.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLWindowManager.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GLApp\MathTools.cpp" />
+    <ClCompile Include="..\..\_shared_sources\GrahamScan.cpp" />
+    <ClCompile Include="..\..\_shared_sources\HistogramPlotter.cpp" />
+    <ClCompile Include="..\..\_shared_sources\HistogramSettings.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Interface.cpp" />
+    <ClCompile Include="..\..\_shared_sources\LoadStatus.cpp" />
+    <ClCompile Include="..\..\_shared_sources\MirrorFacet.cpp" />
+    <ClCompile Include="..\..\_shared_sources\MirrorVertex.cpp" />
+    <ClCompile Include="..\..\_shared_sources\MoveFacet.cpp" />
+    <ClCompile Include="..\..\_shared_sources\MoveVertex.cpp" />
+    <ClCompile Include="..\..\_shared_sources\ParticleLogger.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Polygon.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Process.cpp" />
+    <ClCompile Include="..\..\_shared_sources\PugiXML\pugixml.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Random.cpp" />
+    <ClCompile Include="..\..\_shared_sources\RecoveryDialog.cpp" />
+    <ClCompile Include="..\..\_shared_sources\RotateFacet.cpp" />
+    <ClCompile Include="..\..\_shared_sources\RotateVertex.cpp" />
+    <ClCompile Include="..\..\_shared_sources\ScaleFacet.cpp" />
+    <ClCompile Include="..\..\_shared_sources\ScaleVertex.cpp" />
+    <ClCompile Include="..\..\_shared_sources\SDL_SavePNG\savepng.c" />
+    <ClCompile Include="..\..\_shared_sources\SelectDialog.cpp" />
+    <ClCompile Include="..\..\_shared_sources\SelectTextureType.cpp" />
+    <ClCompile Include="..\..\_shared_sources\ShMemory.cpp" />
+    <ClCompile Include="..\..\_shared_sources\SmartSelection.cpp" />
+    <ClCompile Include="..\..\_shared_sources\SplitFacet.cpp" />
+    <ClCompile Include="..\..\_shared_sources\TruncatedGaussian\rtnorm.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Vector.cpp" />
+    <ClCompile Include="..\..\_shared_sources\VertexCoordinates.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Web.cpp" />
+    <ClCompile Include="..\..\_shared_sources\Worker_shared.cpp" />
+    <ClCompile Include="..\..\_shared_sources\ZipUtils\unzip.cpp" />
+    <ClCompile Include="..\..\_shared_sources\ZipUtils\zip.cpp" />
+    <ClCompile Include="..\Source_files\FacetDetails.cpp" />
+    <ClCompile Include="..\Source_files\FacetAdvParams.cpp" />
+    <ClCompile Include="..\Source_files\GeometryRender.cpp" />
+    <ClCompile Include="..\Source_files\GeometryViewer.cpp" />
+    <ClCompile Include="..\Source_files\GlobalSettings.cpp" />
+    <ClCompile Include="..\Source_files\HistoryWin.cpp" />
+    <ClCompile Include="..\Source_files\ImportDesorption.cpp" />
+    <ClCompile Include="..\Source_files\MolFlow.cpp" />
+    <ClCompile Include="..\Source_files\MolflowFacet.cpp" />
+    <ClCompile Include="..\Source_files\MolflowGeometry.cpp" />
+    <ClCompile Include="..\Source_files\MolflowTypes.cpp" />
+    <ClCompile Include="..\Source_files\MolflowWorker.cpp" />
+    <ClCompile Include="..\Source_files\MomentsEditor.cpp" />
+    <ClCompile Include="..\Source_files\Movement.cpp" />
+    <ClCompile Include="..\Source_files\OutgassingMap.cpp" />
+    <ClCompile Include="..\Source_files\Parameter.cpp" />
+    <ClCompile Include="..\Source_files\ParameterEditor.cpp" />
+    <ClCompile Include="..\Source_files\PressureEvolution.cpp" />
+    <ClCompile Include="..\Source_files\ProfilePlotter.cpp" />
+    <ClCompile Include="..\Source_files\TexturePlotter.cpp" />
+    <ClCompile Include="..\Source_files\TextureScaling.cpp" />
+    <ClCompile Include="..\Source_files\TimeSettings.cpp" />
+    <ClCompile Include="..\Source_files\TimewisePlotter.cpp" />
+    <ClCompile Include="..\Source_files\Viewer3DSettings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\_shared_sources\AddVertex.h" />
+    <ClInclude Include="..\..\_shared_sources\AlignFacet.h" />
+    <ClInclude Include="..\..\_shared_sources\AppUpdater.h" />
+    <ClInclude Include="..\..\_shared_sources\ASELoader.h" />
+    <ClInclude Include="..\..\_shared_sources\Buffer_shared.h" />
+    <ClInclude Include="..\..\_shared_sources\BuildIntersection.h" />
+    <ClInclude Include="..\..\_shared_sources\Clipper\clipper.hpp" />
+    <ClInclude Include="..\..\_shared_sources\CollapseSettings.h" />
+    <ClInclude Include="..\..\_shared_sources\CreateShape.h" />
+    <ClInclude Include="..\..\_shared_sources\Distributions.h" />
+    <ClInclude Include="..\..\_shared_sources\ExtrudeFacet.h" />
+    <ClInclude Include="..\..\_shared_sources\FacetCoordinates.h" />
+    <ClInclude Include="..\..\_shared_sources\Facet_shared.h" />
+    <ClInclude Include="..\..\_shared_sources\File.h" />
+    <ClInclude Include="..\..\_shared_sources\FormulaEditor.h" />
+    <ClInclude Include="..\..\_shared_sources\Geometry_shared.h" />
+    <ClInclude Include="..\..\_shared_sources\GeometryViewer.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLApp.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLButton.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\AxisPanel.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\DataList.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLAxis.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLChart.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLChartConst.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLChartOptions.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLDataView.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLDataViewOptions.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\SearchInfo.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLColorBox.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLCombo.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLComponent.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLContainer.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLFileBox.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLFont.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLGradient.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLIcon.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLInputBox.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLLabel.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLList.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLMatrix.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLMenu.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLMenuBar.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLMessageBox.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLParser.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLProgress.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLSaveDialog.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLScrollBar.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLSpinner.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLSprite.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLTabWindow.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLTextField.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLTitledPanel.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLToggle.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLToolkit.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLTypes.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLUnitDialog.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLWindow.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLWindowManager.h" />
+    <ClInclude Include="..\..\_shared_sources\GLApp\MathTools.h" />
+    <ClInclude Include="..\..\_shared_sources\GrahamScan.h" />
+    <ClInclude Include="..\..\_shared_sources\HistogramPlotter.h" />
+    <ClInclude Include="..\..\_shared_sources\HistogramSettings.h" />
+    <ClInclude Include="..\..\_shared_sources\Interface.h" />
+    <ClInclude Include="..\..\_shared_sources\LoadStatus.h" />
+    <ClInclude Include="..\..\_shared_sources\MirrorFacet.h" />
+    <ClInclude Include="..\..\_shared_sources\MirrorVertex.h" />
+    <ClInclude Include="..\..\_shared_sources\MoveFacet.h" />
+    <ClInclude Include="..\..\_shared_sources\MoveVertex.h" />
+    <ClInclude Include="..\..\_shared_sources\ParticleLogger.h" />
+    <ClInclude Include="..\..\_shared_sources\Polygon.h" />
+    <ClInclude Include="..\..\_shared_sources\PugiXML\pugiconfig.hpp" />
+    <ClInclude Include="..\..\_shared_sources\PugiXML\pugixml.hpp" />
+    <ClInclude Include="..\..\_shared_sources\RecoveryDialog.h" />
+    <ClInclude Include="..\..\_shared_sources\RotateFacet.h" />
+    <ClInclude Include="..\..\_shared_sources\RotateVertex.h" />
+    <ClInclude Include="..\..\_shared_sources\ScaleFacet.h" />
+    <ClInclude Include="..\..\_shared_sources\ScaleVertex.h" />
+    <ClInclude Include="..\..\_shared_sources\SDL_SavePNG\savepng.h" />
+    <ClInclude Include="..\..\_shared_sources\SelectDialog.h" />
+    <ClInclude Include="..\..\_shared_sources\SelectTextureType.h" />
+    <ClInclude Include="..\..\_shared_sources\SmartSelection.h" />
+    <ClInclude Include="..\..\_shared_sources\SMP.h" />
+    <ClInclude Include="..\..\_shared_sources\SplitFacet.h" />
+    <ClInclude Include="..\..\_shared_sources\Vector.h" />
+    <ClInclude Include="..\..\_shared_sources\VertexCoordinates.h" />
+    <ClInclude Include="..\..\_shared_sources\Worker.h" />
+    <ClInclude Include="..\..\_shared_sources\ZipUtils\unzip.h" />
+    <ClInclude Include="..\..\_shared_sources\ZipUtils\zip.h" />
+    <ClInclude Include="..\Source_files\FacetDetails.h" />
+    <ClInclude Include="..\Source_files\FacetAdvParams.h" />
+    <ClInclude Include="..\Source_files\GlobalSettings.h" />
+    <ClInclude Include="..\Source_files\HistoryWin.h" />
+    <ClInclude Include="..\Source_files\ImportDesorption.h" />
+    <ClInclude Include="..\Source_files\MolFlow.h" />
+    <ClInclude Include="..\Source_files\MolflowGeometry.h" />
+    <ClInclude Include="..\Source_files\MomentsEditor.h" />
+    <ClInclude Include="..\Source_files\Movement.h" />
+    <ClInclude Include="..\Source_files\OutgassingMap.h" />
+    <ClInclude Include="..\Source_files\Parameter.h" />
+    <ClInclude Include="..\Source_files\ParameterEditor.h" />
+    <ClInclude Include="..\Source_files\PressureEvolution.h" />
+    <ClInclude Include="..\Source_files\ProfilePlotter.h" />
+    <ClInclude Include="..\Source_files\TexturePlotter.h" />
+    <ClInclude Include="..\Source_files\TextureScaling.h" />
+    <ClInclude Include="..\Source_files\TimeSettings.h" />
+    <ClInclude Include="..\Source_files\TimewisePlotter.h" />
+    <ClInclude Include="..\Source_files\MolflowTypes.h" />
+    <ClInclude Include="..\Source_files\Viewer3DSettings.h" />
+    <ClInclude Include="lib\include\cereal\access.hpp" />
+    <ClInclude Include="lib\include\cereal\archives\adapters.hpp" />
+    <ClInclude Include="lib\include\cereal\archives\binary.hpp" />
+    <ClInclude Include="lib\include\cereal\archives\json.hpp" />
+    <ClInclude Include="lib\include\cereal\archives\portable_binary.hpp" />
+    <ClInclude Include="lib\include\cereal\archives\xml.hpp" />
+    <ClInclude Include="lib\include\cereal\cereal.hpp" />
+    <ClInclude Include="lib\include\cereal\details\helpers.hpp" />
+    <ClInclude Include="lib\include\cereal\details\polymorphic_impl.hpp" />
+    <ClInclude Include="lib\include\cereal\details\polymorphic_impl_fwd.hpp" />
+    <ClInclude Include="lib\include\cereal\details\static_object.hpp" />
+    <ClInclude Include="lib\include\cereal\details\traits.hpp" />
+    <ClInclude Include="lib\include\cereal\details\util.hpp" />
+    <ClInclude Include="lib\include\cereal\external\base64.hpp" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\allocators.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\document.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\encodedstream.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\encodings.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\error\en.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\error\error.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\filereadstream.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\filewritestream.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\fwd.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\itoa.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\meta.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\pow10.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\regex.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\stack.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\strtod.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\swap.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\memorybuffer.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\memorystream.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\pointer.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\prettywriter.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\rapidjson.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\reader.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\schema.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\stream.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\stringbuffer.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidjson\writer.h" />
+    <ClInclude Include="lib\include\cereal\external\rapidxml\rapidxml.hpp" />
+    <ClInclude Include="lib\include\cereal\external\rapidxml\rapidxml_iterators.hpp" />
+    <ClInclude Include="lib\include\cereal\external\rapidxml\rapidxml_print.hpp" />
+    <ClInclude Include="lib\include\cereal\external\rapidxml\rapidxml_utils.hpp" />
+    <ClInclude Include="lib\include\cereal\macros.hpp" />
+    <ClInclude Include="lib\include\cereal\types\array.hpp" />
+    <ClInclude Include="lib\include\cereal\types\base_class.hpp" />
+    <ClInclude Include="lib\include\cereal\types\bitset.hpp" />
+    <ClInclude Include="lib\include\cereal\types\boost_variant.hpp" />
+    <ClInclude Include="lib\include\cereal\types\chrono.hpp" />
+    <ClInclude Include="lib\include\cereal\types\common.hpp" />
+    <ClInclude Include="lib\include\cereal\types\complex.hpp" />
+    <ClInclude Include="lib\include\cereal\types\concepts\pair_associative_container.hpp" />
+    <ClInclude Include="lib\include\cereal\types\deque.hpp" />
+    <ClInclude Include="lib\include\cereal\types\forward_list.hpp" />
+    <ClInclude Include="lib\include\cereal\types\functional.hpp" />
+    <ClInclude Include="lib\include\cereal\types\list.hpp" />
+    <ClInclude Include="lib\include\cereal\types\map.hpp" />
+    <ClInclude Include="lib\include\cereal\types\memory.hpp" />
+    <ClInclude Include="lib\include\cereal\types\polymorphic.hpp" />
+    <ClInclude Include="lib\include\cereal\types\queue.hpp" />
+    <ClInclude Include="lib\include\cereal\types\set.hpp" />
+    <ClInclude Include="lib\include\cereal\types\stack.hpp" />
+    <ClInclude Include="lib\include\cereal\types\string.hpp" />
+    <ClInclude Include="lib\include\cereal\types\tuple.hpp" />
+    <ClInclude Include="lib\include\cereal\types\unordered_map.hpp" />
+    <ClInclude Include="lib\include\cereal\types\unordered_set.hpp" />
+    <ClInclude Include="lib\include\cereal\types\utility.hpp" />
+    <ClInclude Include="lib\include\cereal\types\valarray.hpp" />
+    <ClInclude Include="lib\include\cereal\types\vector.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\_shared_sources\molflow_synrad.licenseheader" />
+    <None Include="lib\include\cereal\external\rapidxml\manual.html" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

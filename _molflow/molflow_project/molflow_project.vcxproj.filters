@@ -1,0 +1,951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Clipper">
+      <UniqueIdentifier>{36ff3746-23dd-4f4d-8cf1-f0b852ca5f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GLApp">
+      <UniqueIdentifier>{7f896f8b-ddba-4065-bc0c-d26b9c3414e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GLApp\GLChart">
+      <UniqueIdentifier>{2bca1291-7226-445b-a30a-5cc277fa44c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PugiXML">
+      <UniqueIdentifier>{ec373c5c-9d0e-4b5e-b107-e41369282031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZipUtils">
+      <UniqueIdentifier>{f2c7fdf6-aa99-40fb-9735-54af54fb88f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Shared">
+      <UniqueIdentifier>{ffbd89e6-8a96-484c-b82f-016b80cbfe08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shared">
+      <UniqueIdentifier>{865a5d3e-0722-4b64-8a9b-e216de73e472}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TruncatedGaussian">
+      <UniqueIdentifier>{da469625-235e-46d1-8193-3f5332121271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDL_SavePNG">
+      <UniqueIdentifier>{0fa8b1a4-342f-442c-a4cd-9b981813f6a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cereal">
+      <UniqueIdentifier>{3bc00cbf-dff4-4ea1-a067-f57ef665ded3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\_shared_sources\Clipper\clipper.cpp">
+      <Filter>Clipper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\AxisPanel.cpp">
+      <Filter>GLApp\GLChart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLAxis.cpp">
+      <Filter>GLApp\GLChart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLChart.cpp">
+      <Filter>GLApp\GLChart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLChartOptions.cpp">
+      <Filter>GLApp\GLChart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLDataView.cpp">
+      <Filter>GLApp\GLChart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLChart\GLDataViewOptions.cpp">
+      <Filter>GLApp\GLChart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\PugiXML\pugixml.cpp">
+      <Filter>PugiXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\ZipUtils\unzip.cpp">
+      <Filter>ZipUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\ZipUtils\zip.cpp">
+      <Filter>ZipUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\BuildIntersection.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\CollapseSettings.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\ExtrudeFacet.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\FacetCoordinates.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\File.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\ShMemory.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\RecoveryDialog.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GrahamScan.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\ASELoader.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GeometryViewer_shared.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GeometryRender_shared.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\AlignFacet.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\MirrorFacet.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\LoadStatus.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\AddVertex.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\TexturePlotter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\TimewisePlotter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\Viewer3DSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\MolFlow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\TimeSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\Movement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\ParameterEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\OutgassingMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\MomentsEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\Parameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\ImportDesorption.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\GeometryViewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\GeometryRender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\FacetDetails.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\GlobalSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\PressureEvolution.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\ProfilePlotter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\MoveFacet.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\MoveVertex.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\RotateFacet.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\ScaleFacet.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\ScaleVertex.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\SelectDialog.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\SmartSelection.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\SplitFacet.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\VertexCoordinates.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Worker_shared.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Facet_shared.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Interface.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLApp.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLButton.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLColorBox.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLCombo.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLComponent.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLContainer.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLFileBox.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLFont.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLGradient.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLIcon.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLInputBox.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLLabel.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLList.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLMatrix.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLMenu.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLMenuBar.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLMessageBox.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLParser.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLProgress.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLSaveDialog.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLScrollBar.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLSpinner.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLSprite.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLTabWindow.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLTextField.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLTitledPanel.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLToggle.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLToolkit.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLUnitDialog.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLWindow.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\GLWindowManager.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\GLApp\MathTools.cpp">
+      <Filter>GLApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\MolflowGeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Vector.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Polygon.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\MirrorVertex.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\RotateVertex.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\SelectTextureType.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Random.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\TruncatedGaussian\rtnorm.cpp">
+      <Filter>TruncatedGaussian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\FacetAdvParams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Web.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Process.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\FormulaEditor.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Distributions.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\Geometry_shared.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\CreateShape.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\AppUpdater.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\MolflowFacet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\MolflowWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\MolflowTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\ParticleLogger.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\TextureScaling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\HistogramSettings.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\HistogramPlotter.cpp">
+      <Filter>Source Files\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source_files\HistoryWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_shared_sources\SDL_SavePNG\savepng.c">
+      <Filter>SDL_SavePNG</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\_shared_sources\Clipper\clipper.hpp">
+      <Filter>Clipper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\AxisPanel.h">
+      <Filter>GLApp\GLChart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\DataList.h">
+      <Filter>GLApp\GLChart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLAxis.h">
+      <Filter>GLApp\GLChart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLChart.h">
+      <Filter>GLApp\GLChart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLChartConst.h">
+      <Filter>GLApp\GLChart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLChartOptions.h">
+      <Filter>GLApp\GLChart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLDataView.h">
+      <Filter>GLApp\GLChart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\GLDataViewOptions.h">
+      <Filter>GLApp\GLChart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLChart\SearchInfo.h">
+      <Filter>GLApp\GLChart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\PugiXML\pugiconfig.hpp">
+      <Filter>PugiXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\PugiXML\pugixml.hpp">
+      <Filter>PugiXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\ZipUtils\unzip.h">
+      <Filter>ZipUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\ZipUtils\zip.h">
+      <Filter>ZipUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\RecoveryDialog.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\MoveFacet.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\MirrorFacet.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GrahamScan.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\FacetCoordinates.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\ASELoader.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\AlignFacet.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\AddVertex.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\File.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GeometryViewer.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\SMP.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\CollapseSettings.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\BuildIntersection.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\LoadStatus.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\ExtrudeFacet.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\VertexCoordinates.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\ScaleVertex.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\ScaleFacet.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\RotateFacet.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\ParameterEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\Viewer3DSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\TimewisePlotter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\TimeSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\TexturePlotter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\ProfilePlotter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\PressureEvolution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\Parameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\OutgassingMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\Movement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\MomentsEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\ImportDesorption.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\GlobalSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\FacetDetails.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\MolFlow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\MoveVertex.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\SelectDialog.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\SmartSelection.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\SplitFacet.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\Interface.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLApp.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLButton.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLColorBox.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLCombo.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLComponent.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLContainer.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLFileBox.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLFont.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLGradient.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLIcon.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLInputBox.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLLabel.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLList.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLMatrix.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLMenu.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLMenuBar.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLMessageBox.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLParser.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLProgress.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLSaveDialog.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLScrollBar.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLSpinner.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLSprite.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLTabWindow.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLTextField.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLTitledPanel.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLToggle.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLToolkit.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLTypes.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLUnitDialog.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLWindow.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\GLWindowManager.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\GLApp\MathTools.h">
+      <Filter>GLApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\Polygon.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\RotateVertex.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\SelectTextureType.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\Vector.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\MolflowGeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\MolflowTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\MirrorVertex.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\FacetAdvParams.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\FormulaEditor.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\Distributions.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\Geometry_shared.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\CreateShape.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\Facet_shared.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\Buffer_shared.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\AppUpdater.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\Worker.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\ParticleLogger.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\SDL_SavePNG\savepng.h">
+      <Filter>SDL_SavePNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\TextureScaling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\HistogramSettings.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\access.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\archives\adapters.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\archives\binary.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\archives\json.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\archives\portable_binary.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\archives\xml.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\cereal.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\details\helpers.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\details\polymorphic_impl.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\details\polymorphic_impl_fwd.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\details\static_object.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\details\traits.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\details\util.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\base64.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\allocators.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\document.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\encodedstream.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\encodings.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\error\en.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\error\error.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\filereadstream.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\filewritestream.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\fwd.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\biginteger.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\diyfp.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\dtoa.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\ieee754.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\itoa.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\meta.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\pow10.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\regex.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\stack.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\strfunc.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\strtod.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\internal\swap.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\istreamwrapper.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\memorybuffer.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\memorystream.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\msinttypes\inttypes.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\msinttypes\stdint.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\ostreamwrapper.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\pointer.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\prettywriter.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\rapidjson.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\reader.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\schema.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\stream.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\stringbuffer.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidjson\writer.h">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidxml\rapidxml.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidxml\rapidxml_iterators.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidxml\rapidxml_print.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\external\rapidxml\rapidxml_utils.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\macros.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\array.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\base_class.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\bitset.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\boost_variant.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\chrono.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\common.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\complex.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\concepts\pair_associative_container.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\deque.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\forward_list.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\functional.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\list.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\map.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\memory.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\polymorphic.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\queue.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\set.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\stack.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\string.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\tuple.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\unordered_map.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\unordered_set.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\utility.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\valarray.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\include\cereal\types\vector.hpp">
+      <Filter>Cereal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_shared_sources\HistogramPlotter.h">
+      <Filter>Header Files\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source_files\HistoryWin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\_shared_sources\molflow_synrad.licenseheader" />
+    <None Include="lib\include\cereal\external\rapidxml\manual.html">
+      <Filter>Cereal</Filter>
+    </None>
+  </ItemGroup>
+</Project>
