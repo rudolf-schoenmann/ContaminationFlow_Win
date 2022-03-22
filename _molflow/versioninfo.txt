@@ -1,3 +1,0 @@
-24
-http://test-molflow.web.cern.ch/sites/test-molflow.web.cern.ch/files/molflow_8jun.zip
-molflow_8jun
