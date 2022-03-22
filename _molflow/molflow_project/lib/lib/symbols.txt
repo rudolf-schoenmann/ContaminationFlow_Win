@@ -1,0 +1,313 @@
+Microsoft (R) COFF/PE Dumper Version 12.00.31101.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Users\Marton\Desktop\molflow_x64\molflow_project\lib\lib\ImageLibx64.lib
+
+File Type: LIBRARY
+
+Archive member name at 8: /               
+54B3DD03 time/date Mon Jan 12 15:41:07 2015
+         uid
+         gid
+       0 mode
+    1C26 size
+correct header end
+
+    128 public symbols
+
+     3828 ??$_Allocate@D@std@@YAPEAD_KPEAD@Z
+     3828 ??$addressof@D@std@@YAPEADAEAD@Z
+     3828 ??$construct@PEADAEAPEAD@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAAXPEAPEADAEAPEAD@Z
+     3828 ??$construct@PEADAEAPEAD@?$allocator@D@std@@QEAAXPEAPEADAEAPEAD@Z
+     3828 ??$construct@PEADAEAPEAD@?$allocator_traits@V?$allocator@D@std@@@std@@SAXAEAV?$allocator@D@1@PEAPEADAEAPEAD@Z
+     3828 ??$destroy@PEAD@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAAXPEAPEAD@Z
+     3828 ??$destroy@PEAD@?$allocator@D@std@@QEAAXPEAPEAD@Z
+     3828 ??$destroy@PEAD@?$allocator_traits@V?$allocator@D@std@@@std@@SAXAEAV?$allocator@D@1@PEAPEAD@Z
+     3828 ??$forward@AEAPEAD@std@@YAAEAPEADAEAPEAD@Z
+     3828 ??0?$_String_alloc@$0A@U?$_String_base_types@DV?$allocator@D@std@@@std@@@std@@QEAA@AEBV?$allocator@D@1@@Z
+     3828 ??0?$_String_val@U?$_Simple_types@D@std@@@std@@QEAA@XZ
+     3828 ??0?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAA@XZ
+     3828 ??0?$allocator@D@std@@QEAA@XZ
+     3828 ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@PEBD@Z
+     3828 ??0CImage@@QEAA@XZ
+     3828 ??0_Generic_error_category@std@@QEAA@XZ
+     3828 ??0_Iostream_error_category@std@@QEAA@XZ
+     3828 ??0_System_error_category@std@@QEAA@XZ
+     3828 ??0error_category@std@@QEAA@XZ
+     3828 ??0error_condition@std@@QEAA@HAEBVerror_category@1@@Z
+     3828 ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ
+     3828 ??1_Generic_error_category@std@@UEAA@XZ
+     3828 ??1_Iostream_error_category@std@@UEAA@XZ
+     3828 ??1_System_error_category@std@@UEAA@XZ
+     3828 ??1error_category@std@@UEAA@XZ
+     3828 ??2@YAPEAX_KPEAX@Z
+     3828 ??3@YAXPEAX0@Z
+     3828 ??8error_category@std@@QEBA_NAEBV01@@Z
+     3828 ??8error_condition@std@@QEBA_NAEBV01@@Z
+     3828 ??_7_Generic_error_category@std@@6B@
+     3828 ??_7_Iostream_error_category@std@@6B@
+     3828 ??_7_System_error_category@std@@6B@
+     3828 ??_7error_category@std@@6B@
+     3828 ??_C@_03MOLNDNH@gif?$AA@
+     3828 ??_C@_03NNHBJLDF@png?$AA@
+     3828 ??_C@_03PEGNKCLE@jpg?$AA@
+     3828 ??_C@_04OFMADDDJ@jpeg?$AA@
+     3828 ??_C@_06FHFOAHML@system?$AA@
+     3828 ??_C@_07DCLBNMLN@generic?$AA@
+     3828 ??_C@_08LLGCOLLL@iostream?$AA@
+     3828 ??_C@_09MKPOIBMA@No?5errors?$AA@
+     3828 ??_C@_0BA@JFNIOLAK@string?5too?5long?$AA@
+     3828 ??_C@_0BE@CJNMGKMP@Not?5gif?0jpg?5or?5png?4?$AA@
+     3828 ??_C@_0BG@PADBLCHM@iostream?5stream?5error?$AA@
+     3828 ??_C@_0BI@CFPLBAOH@invalid?5string?5position?$AA@
+     3828 ??_C@_0BK@JKJLENAM@Does?5not?5have?5extensions?4?$AA@
+     3828 ??_C@_0O@BFJCFAAK@unknown?5error?$AA@
+     3828 ??_G_Generic_error_category@std@@UEAAPEAXI@Z
+     3828 ??_G_Iostream_error_category@std@@UEAAPEAXI@Z
+     3828 ??_G_System_error_category@std@@UEAAPEAXI@Z
+     3828 ??_Gerror_category@std@@UEAAPEAXI@Z
+     3828 ??_R0?AV_Generic_error_category@std@@@8
+     3828 ??_R0?AV_Iostream_error_category@std@@@8
+     3828 ??_R0?AV_System_error_category@std@@@8
+     3828 ??_R0?AVerror_category@std@@@8
+     3828 ??_R1A@?0A@EA@_Generic_error_category@std@@8
+     3828 ??_R1A@?0A@EA@_Iostream_error_category@std@@8
+     3828 ??_R1A@?0A@EA@_System_error_category@std@@8
+     3828 ??_R1A@?0A@EA@error_category@std@@8
+     3828 ??_R2_Generic_error_category@std@@8
+     3828 ??_R2_Iostream_error_category@std@@8
+     3828 ??_R2_System_error_category@std@@8
+     3828 ??_R2error_category@std@@8
+     3828 ??_R3_Generic_error_category@std@@8
+     3828 ??_R3_Iostream_error_category@std@@8
+     3828 ??_R3_System_error_category@std@@8
+     3828 ??_R3error_category@std@@8
+     3828 ??_R4_Generic_error_category@std@@6B@
+     3828 ??_R4_Iostream_error_category@std@@6B@
+     3828 ??_R4_System_error_category@std@@6B@
+     3828 ??_R4error_category@std@@6B@
+     3828 ?GetData@CImage@@QEAAPEAEXZ
+     3828 ?GetErrorMessage@CImage@@QEAAPEADXZ
+     3828 ?Height@CImage@@QEAAHXZ
+     3828 ?LoadCImage@CImage@@QEAAHPEAD@Z
+     3828 ?Release@CImage@@QEAAXXZ
+     3828 ?WritePNG@CImage@@SAPEADPEADHHPEAE@Z
+     3828 ?_Copy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAX_K0@Z
+     3828 ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAX_K@Z
+     3828 ?_Generic_object@?$_Error_objects@H@std@@2V_Generic_error_category@2@A
+     3828 ?_Getal@?$_String_alloc@$0A@U?$_String_base_types@DV?$allocator@D@std@@@std@@@std@@QEBA?AU?$_Wrap_alloc@V?$allocator@D@std@@@2@XZ
+     3828 ?_Grow@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA_N_K_N@Z
+     3828 ?_Inside@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA_NPEBD@Z
+     3828 ?_Iostream_object@?$_Error_objects@H@std@@2V_Iostream_error_category@2@A
+     3828 ?_Myptr@?$_String_val@U?$_Simple_types@D@std@@@std@@QEAAPEADXZ
+     3828 ?_Myptr@?$_String_val@U?$_Simple_types@D@std@@@std@@QEBAPEBDXZ
+     3828 ?_System_object@?$_Error_objects@H@std@@2V_System_error_category@2@A
+     3828 ?_Tidy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAX_N_K@Z
+     3828 ?_Xlen@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBAXXZ
+     3828 ?_Xran@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBAXXZ
+     3828 ?allocate@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAAPEAD_K@Z
+     3828 ?allocate@?$allocator@D@std@@QEAAPEAD_K@Z
+     3828 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@AEBV12@_K1@Z
+     3828 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@PEBD@Z
+     3828 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@PEBD_K@Z
+     3828 ?assign@?$char_traits@D@std@@SAXAEADAEBD@Z
+     3828 ?category@error_code@std@@QEBAAEBVerror_category@2@XZ
+     3828 ?category@error_condition@std@@QEBAAEBVerror_category@2@XZ
+     3828 ?copy@?$char_traits@D@std@@SAPEADPEADPEBD_K@Z
+     3828 ?deallocate@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAAXPEAD_K@Z
+     3828 ?deallocate@?$allocator@D@std@@QEAAXPEAD_K@Z
+     3828 ?default_error_condition@_System_error_category@std@@UEBA?AVerror_condition@2@H@Z
+     3828 ?default_error_condition@error_category@std@@UEBA?AVerror_condition@2@H@Z
+     3828 ?equivalent@error_category@std@@UEBA_NAEBVerror_code@2@H@Z
+     3828 ?equivalent@error_category@std@@UEBA_NHAEBVerror_condition@2@@Z
+     3828 ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@_K0@Z
+     3828 ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@_K@Z
+     3828 ?generic_category@std@@YAAEBVerror_category@1@XZ
+     3828 ?id@?$num_put@DV?$back_insert_iterator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@2V0locale@2@A
+     3828 ?id@?$num_put@_WV?$back_insert_iterator@V?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@std@@@std@@2V0locale@2@A
+     3828 ?length@?$char_traits@D@std@@SA_KPEBD@Z
+     3828 ?max_size@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEBA_KXZ
+     3828 ?max_size@?$allocator@D@std@@QEBA_KXZ
+     3828 ?max_size@?$allocator_traits@V?$allocator@D@std@@@std@@SA_KAEBV?$allocator@D@2@@Z
+     3828 ?max_size@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KXZ
+     3828 ?message@_Generic_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z
+     3828 ?message@_Iostream_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z
+     3828 ?message@_System_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z
+     3828 ?move@?$char_traits@D@std@@SAPEADPEADPEBD_K@Z
+     3828 ?name@_Generic_error_category@std@@UEBAPEBDXZ
+     3828 ?name@_Iostream_error_category@std@@UEBAPEBDXZ
+     3828 ?name@_System_error_category@std@@UEBAPEBDXZ
+     3828 ?size@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KXZ
+     3828 ?strrchr@@YAPEADPEADH@Z
+     3828 ?system_category@std@@YAAEBVerror_category@1@XZ
+     3828 ?value@error_code@std@@QEBAHXZ
+     3828 ?value@error_condition@std@@QEBAHXZ
+     3828 hypot
+
+Archive member name at 1C6A: /               
+54B3DD03 time/date Mon Jan 12 15:41:07 2015
+         uid
+         gid
+       0 mode
+    1B2E size
+correct header end
+
+    1 offsets
+
+        1     3828
+
+    128 public symbols
+
+        1 ??$_Allocate@D@std@@YAPEAD_KPEAD@Z
+        1 ??$addressof@D@std@@YAPEADAEAD@Z
+        1 ??$construct@PEADAEAPEAD@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAAXPEAPEADAEAPEAD@Z
+        1 ??$construct@PEADAEAPEAD@?$allocator@D@std@@QEAAXPEAPEADAEAPEAD@Z
+        1 ??$construct@PEADAEAPEAD@?$allocator_traits@V?$allocator@D@std@@@std@@SAXAEAV?$allocator@D@1@PEAPEADAEAPEAD@Z
+        1 ??$destroy@PEAD@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAAXPEAPEAD@Z
+        1 ??$destroy@PEAD@?$allocator@D@std@@QEAAXPEAPEAD@Z
+        1 ??$destroy@PEAD@?$allocator_traits@V?$allocator@D@std@@@std@@SAXAEAV?$allocator@D@1@PEAPEAD@Z
+        1 ??$forward@AEAPEAD@std@@YAAEAPEADAEAPEAD@Z
+        1 ??0?$_String_alloc@$0A@U?$_String_base_types@DV?$allocator@D@std@@@std@@@std@@QEAA@AEBV?$allocator@D@1@@Z
+        1 ??0?$_String_val@U?$_Simple_types@D@std@@@std@@QEAA@XZ
+        1 ??0?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAA@XZ
+        1 ??0?$allocator@D@std@@QEAA@XZ
+        1 ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@PEBD@Z
+        1 ??0CImage@@QEAA@XZ
+        1 ??0_Generic_error_category@std@@QEAA@XZ
+        1 ??0_Iostream_error_category@std@@QEAA@XZ
+        1 ??0_System_error_category@std@@QEAA@XZ
+        1 ??0error_category@std@@QEAA@XZ
+        1 ??0error_condition@std@@QEAA@HAEBVerror_category@1@@Z
+        1 ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ
+        1 ??1_Generic_error_category@std@@UEAA@XZ
+        1 ??1_Iostream_error_category@std@@UEAA@XZ
+        1 ??1_System_error_category@std@@UEAA@XZ
+        1 ??1error_category@std@@UEAA@XZ
+        1 ??2@YAPEAX_KPEAX@Z
+        1 ??3@YAXPEAX0@Z
+        1 ??8error_category@std@@QEBA_NAEBV01@@Z
+        1 ??8error_condition@std@@QEBA_NAEBV01@@Z
+        1 ??_7_Generic_error_category@std@@6B@
+        1 ??_7_Iostream_error_category@std@@6B@
+        1 ??_7_System_error_category@std@@6B@
+        1 ??_7error_category@std@@6B@
+        1 ??_C@_03MOLNDNH@gif?$AA@
+        1 ??_C@_03NNHBJLDF@png?$AA@
+        1 ??_C@_03PEGNKCLE@jpg?$AA@
+        1 ??_C@_04OFMADDDJ@jpeg?$AA@
+        1 ??_C@_06FHFOAHML@system?$AA@
+        1 ??_C@_07DCLBNMLN@generic?$AA@
+        1 ??_C@_08LLGCOLLL@iostream?$AA@
+        1 ??_C@_09MKPOIBMA@No?5errors?$AA@
+        1 ??_C@_0BA@JFNIOLAK@string?5too?5long?$AA@
+        1 ??_C@_0BE@CJNMGKMP@Not?5gif?0jpg?5or?5png?4?$AA@
+        1 ??_C@_0BG@PADBLCHM@iostream?5stream?5error?$AA@
+        1 ??_C@_0BI@CFPLBAOH@invalid?5string?5position?$AA@
+        1 ??_C@_0BK@JKJLENAM@Does?5not?5have?5extensions?4?$AA@
+        1 ??_C@_0O@BFJCFAAK@unknown?5error?$AA@
+        1 ??_G_Generic_error_category@std@@UEAAPEAXI@Z
+        1 ??_G_Iostream_error_category@std@@UEAAPEAXI@Z
+        1 ??_G_System_error_category@std@@UEAAPEAXI@Z
+        1 ??_Gerror_category@std@@UEAAPEAXI@Z
+        1 ??_R0?AV_Generic_error_category@std@@@8
+        1 ??_R0?AV_Iostream_error_category@std@@@8
+        1 ??_R0?AV_System_error_category@std@@@8
+        1 ??_R0?AVerror_category@std@@@8
+        1 ??_R1A@?0A@EA@_Generic_error_category@std@@8
+        1 ??_R1A@?0A@EA@_Iostream_error_category@std@@8
+        1 ??_R1A@?0A@EA@_System_error_category@std@@8
+        1 ??_R1A@?0A@EA@error_category@std@@8
+        1 ??_R2_Generic_error_category@std@@8
+        1 ??_R2_Iostream_error_category@std@@8
+        1 ??_R2_System_error_category@std@@8
+        1 ??_R2error_category@std@@8
+        1 ??_R3_Generic_error_category@std@@8
+        1 ??_R3_Iostream_error_category@std@@8
+        1 ??_R3_System_error_category@std@@8
+        1 ??_R3error_category@std@@8
+        1 ??_R4_Generic_error_category@std@@6B@
+        1 ??_R4_Iostream_error_category@std@@6B@
+        1 ??_R4_System_error_category@std@@6B@
+        1 ??_R4error_category@std@@6B@
+        1 ?GetData@CImage@@QEAAPEAEXZ
+        1 ?GetErrorMessage@CImage@@QEAAPEADXZ
+        1 ?Height@CImage@@QEAAHXZ
+        1 ?LoadCImage@CImage@@QEAAHPEAD@Z
+        1 ?Release@CImage@@QEAAXXZ
+        1 ?WritePNG@CImage@@SAPEADPEADHHPEAE@Z
+        1 ?_Copy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAX_K0@Z
+        1 ?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAX_K@Z
+        1 ?_Generic_object@?$_Error_objects@H@std@@2V_Generic_error_category@2@A
+        1 ?_Getal@?$_String_alloc@$0A@U?$_String_base_types@DV?$allocator@D@std@@@std@@@std@@QEBA?AU?$_Wrap_alloc@V?$allocator@D@std@@@2@XZ
+        1 ?_Grow@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA_N_K_N@Z
+        1 ?_Inside@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA_NPEBD@Z
+        1 ?_Iostream_object@?$_Error_objects@H@std@@2V_Iostream_error_category@2@A
+        1 ?_Myptr@?$_String_val@U?$_Simple_types@D@std@@@std@@QEAAPEADXZ
+        1 ?_Myptr@?$_String_val@U?$_Simple_types@D@std@@@std@@QEBAPEBDXZ
+        1 ?_System_object@?$_Error_objects@H@std@@2V_System_error_category@2@A
+        1 ?_Tidy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAX_N_K@Z
+        1 ?_Xlen@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBAXXZ
+        1 ?_Xran@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBAXXZ
+        1 ?allocate@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAAPEAD_K@Z
+        1 ?allocate@?$allocator@D@std@@QEAAPEAD_K@Z
+        1 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@AEBV12@_K1@Z
+        1 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@PEBD@Z
+        1 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@PEBD_K@Z
+        1 ?assign@?$char_traits@D@std@@SAXAEADAEBD@Z
+        1 ?category@error_code@std@@QEBAAEBVerror_category@2@XZ
+        1 ?category@error_condition@std@@QEBAAEBVerror_category@2@XZ
+        1 ?copy@?$char_traits@D@std@@SAPEADPEADPEBD_K@Z
+        1 ?deallocate@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEAAXPEAD_K@Z
+        1 ?deallocate@?$allocator@D@std@@QEAAXPEAD_K@Z
+        1 ?default_error_condition@_System_error_category@std@@UEBA?AVerror_condition@2@H@Z
+        1 ?default_error_condition@error_category@std@@UEBA?AVerror_condition@2@H@Z
+        1 ?equivalent@error_category@std@@UEBA_NAEBVerror_code@2@H@Z
+        1 ?equivalent@error_category@std@@UEBA_NHAEBVerror_condition@2@@Z
+        1 ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@_K0@Z
+        1 ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@_K@Z
+        1 ?generic_category@std@@YAAEBVerror_category@1@XZ
+        1 ?id@?$num_put@DV?$back_insert_iterator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@2V0locale@2@A
+        1 ?id@?$num_put@_WV?$back_insert_iterator@V?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@std@@@std@@2V0locale@2@A
+        1 ?length@?$char_traits@D@std@@SA_KPEBD@Z
+        1 ?max_size@?$_Wrap_alloc@V?$allocator@D@std@@@std@@QEBA_KXZ
+        1 ?max_size@?$allocator@D@std@@QEBA_KXZ
+        1 ?max_size@?$allocator_traits@V?$allocator@D@std@@@std@@SA_KAEBV?$allocator@D@2@@Z
+        1 ?max_size@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KXZ
+        1 ?message@_Generic_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z
+        1 ?message@_Iostream_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z
+        1 ?message@_System_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z
+        1 ?move@?$char_traits@D@std@@SAPEADPEADPEBD_K@Z
+        1 ?name@_Generic_error_category@std@@UEBAPEBDXZ
+        1 ?name@_Iostream_error_category@std@@UEBAPEBDXZ
+        1 ?name@_System_error_category@std@@UEBAPEBDXZ
+        1 ?size@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_KXZ
+        1 ?strrchr@@YAPEADPEADH@Z
+        1 ?system_category@std@@YAAEBVerror_category@1@XZ
+        1 ?value@error_code@std@@QEBAHXZ
+        1 ?value@error_condition@std@@QEBAHXZ
+        1 hypot
+
+Archive member name at 37D4: //              
+54B3DD03 time/date Mon Jan 12 15:41:07 2015
+         uid
+         gid
+       0 mode
+      17 size
+correct header end
+
+Archive member name at 3828: /0              x64\Release\CImage.obj
+54B3DD03 time/date Mon Jan 12 15:41:07 2015
+         uid
+         gid
+  100666 mode
+   CE824 size
+correct header end
+
+ANON OBJECT HEADER VALUES
+               1 version
+            8664 machine (x64)
+        54B3DD03 time date stamp Mon Jan 12 15:41:07 2015
+                 ClassID: {0CB3FE38-D9A5-4DAB-AC9B-D6B6222653C2}
+           CE804 size
+               0 flags
