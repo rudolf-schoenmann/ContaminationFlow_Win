@@ -41,3 +41,17 @@ std_molflow.vcxproj.filters
 tests.vcproj
 UpgradeLog.XML
 versioninfo.txt
+.vs
+Desorption_yields
+parameter_catalog
+molflowupdater_project
+source_snapshots_shared
+molflowupdater_project
+neg_saturation.csv
+compile_new.txt
+compile_old.txt
+autoupdate.txt
+molflow_cmt.txt
+molflow_scan.txt
+Report20170926-1554.vspx
+Report20170926-1633 (2).vspx
