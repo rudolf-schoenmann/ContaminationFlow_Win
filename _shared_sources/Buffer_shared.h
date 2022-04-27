@@ -497,6 +497,12 @@ struct alignas(16) FacetHitBuffer {
 
 	// Counts
 	boost::multiprecision::uint128_t covering; //new counter for covering
+	//llong nbOutgassed;          // Number of outgassed molec
+	//Currently not needed on Windows => commented to acchieve the same size of FacetHitBuffer.
+	//Which is then 24 Byte (boost::multiprecision::uint128_t (c.f. 8 Byte of limbs!) + 7*8 Byte (llong or double)
+	//serialization will remove the not needed Bits...
+	//limbs are set to zero anyway. On Linux there is native uint128_t type. So limbs are not needed.
+	//Therefore, sizeof(uint128_t) is 16 Bytes. => + 8*8 Byte (llong or double) is 80 Byte, too
 	llong nbDesorbed;          // Number of desorbed molec
 	llong nbMCHit;               // Number of hits
 	double nbHitEquiv;			//Equivalent number of hits, used for low-flux impingement rate and density calculation
@@ -510,6 +516,7 @@ struct alignas(16) FacetHitBuffer {
 	{
 		archive(
 			CEREAL_NVP(covering),
+			//CEREAL_NVP(nbOutgassed),
 			CEREAL_NVP(nbDesorbed),
 			CEREAL_NVP(nbMCHit),
 			CEREAL_NVP(nbHitEquiv),
